@@ -1,0 +1,54 @@
+<% layout('layouts/boilerplate') -%>
+<body>
+    <div class="row">
+        <div class="col-lg-8 offset-lg-2">
+        <h1>Add new Tent</h1>
+        <form action="/listings" method="post" class="needs-validation" novalidate enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" name="listing[title]" placeholder="Enter title here" class="form-control" required>
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Enter a title</div>
+            </div> 
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea name="listing[description]" placeholder="Enter description here" class="form-control" required></textarea> 
+                <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">Please enter small description</div>
+            </div>
+            <div class="mb-3"> 
+                <label for="image" class="form-label">Upload Image</label>
+                <input type="file" name="listing[image]" placeholder="size must less than 200KB" class="form-control" required>
+                <div class="invalid-feedback">Please choose an image</div> 
+            </div>
+            <div class="mb-3">
+                <select class="form-select" name="listing[category]" aria-label="Default select example">
+                    <option selected>Select category</option>
+                    <option value="mountains">Mountains</option>
+                    <option value="arctic">Arctic</option>
+                    <option value="farms">Farms</option>
+                    <option value="deserts">Deserts</option>
+                  </select>
+            </div>
+            <div class="row">
+                <div class="mb-3 col-md-4">
+                    <label for="price" class="form-label">Price</label>
+                    <input type="text" name="listing[price]" placeholder="Enter price here" class="form-control" required>
+                    <div class="invalid-feedback">Please enter valid price</div> 
+                </div>
+                <div class="mb-3 col-md-8">
+                    <label for="location" class="form-label">Location</label>
+                    <input type="text" name="listing[location]" placeholder="Enter location here" class="form-control" required> 
+                    <div class="invalid-feedback">Location should be valid</div>
+                </div>
+            </div>
+            <div class="mb-3">
+                <label for="country" class="form-label">Country</label>
+                <input type="text" name="listing[country]" placeholder="Enter country name here" class="form-control" required>
+                <div class="invalid-feedback">Country name should be valid</div>
+            </div>
+            <button class="btn btn-dark add-btn mt-3">Add Tent</button>
+        </form>
+    </div>
+ </div>
+</body>

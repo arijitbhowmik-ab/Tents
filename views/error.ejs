@@ -1,0 +1,15 @@
+<% layout('layouts/boilerplate') -%>
+<body>
+    <div class="error-main">
+        <div class="error-container">
+            <h1> <%= statusCode %> </h1>
+            <p>
+                Oops! Error : <%= message %> with status code <%= statusCode %>
+            </p>
+            <a href="http://localhost:8080/listings">
+                Go Back to Home
+            </a>
+        </div>
+    </div>
+</body>
+
