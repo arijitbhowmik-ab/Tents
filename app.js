@@ -140,7 +140,6 @@ main().then(()=>{
 })
 
 async function main() {
-    console.log("MongoDB Connection String:", process.env.ATLASDB_URL);
     await mongoose.connect(dbUrl)
 }
 
