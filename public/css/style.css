@@ -391,6 +391,9 @@ body{
     .search-box{
         width: 40vw !important;
     }
+    .login-btn{
+        padding-left: 5px;
+    }
 }
 .search-btn{
     border-radius: 5px !important;
